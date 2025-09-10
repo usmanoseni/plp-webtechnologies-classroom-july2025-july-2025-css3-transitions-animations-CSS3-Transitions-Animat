@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.box_container{
+    contain: " ";
+    width: 150px   ;
+    height: 150px;
+    background-color: red;
+    border-radius: 8px;
+    transition: all 0.8s ;
+    margin: 3rem 2rem;
+    transition-delay: 0.2s;
+    transition-timing-function:cubic-bezier(0.68, -0.55, 0.27, 1.55) ;
+}
+body{
+    padding: 0 2rem;
+}
+.box_container:hover{
+    transform: scale(1.2);
+    background-color: blue;
+    opacity: 0.5;
+    cursor: pointer ;
+}
+.startButton{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color : #ffff;
+    background-color: #02ff2c;
+    border: none;
+    outline: none;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.5s ;
+    margin-bottom: 1rem ;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    cursor: pointer;
+}
+.stopButton{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color : #ffff;
+    background-color: #ff5202;
+    border: none;
+    outline: none;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.5s ;
+    margin-bottom: 1rem ;
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    cursor: pointer;
+}
+.stopButton:hover{
+    background-color: red;
+}
+
+.startButton:hover{
+    background-color: #009419;
+}
+.gameControls{
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+    align-items: center;
+    margin-top: 1rem;
+    width: 90%;
+}
+.section2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.game_container{
+    width: 90%;
+    height: 45vh;
+    margin-top: 1rem
+
+}
+#gameArea{
+    width: 90%;
+    border: 2px solid gray;
+    height: 80%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+.ball{
+    content: " ";
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: violet;
+    margin-bottom: 0.5rem;
+    position: absolute;
+}
+.animination{
+    animation: bounce 3s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+   animation-direction: alternate;
+}
+@keyframes bounce {
+    0% { transform: translateX(0);}
+    100% { transform: translateX(980px); }
+}
+
+
